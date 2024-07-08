@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <h1>Fuctions </h1>
+   <h2>1. Function Declaration</h2>
+   <p>functions are reusable <br> they are used to shorten the code and can be called whenever they are needed.</p>
+    <p>Abstraction feature of functions</p>
+    <p>Functions are used to hide the complexity of the code</p>
+    <p>Function has its keyword it shld start with " function function_name"</p>
+    <p>If you return the value in function 
+        <br>u shld collect outside assigning a var to that function call 
+        <pre>
+            function calcArea(height,width)
+            {
+                return height*width;
+            }
+
+            var res=calaArea(20,30)
+            console.log(res)
+        </pre>
+        <br>
+        <hr>
+        <pre> anonymous function
+
+            function printmessgae(message,callback)   <-- flow  then srchs printmessgae function  last line access 
+            {
+                console.log(message);                  <-- callback  calls back the saysmtg Fuction inside printmessgae 
+                callback();                                         then it gets printed  
+            }                                                   
+            function saysmtg(){                                      1st hello  then callback fun()  {  saysmtg ali hogi  } then prints Prajwal    
+                console.log("Prajwal");
+            }
+            printmessgae("Hello",saysmtg());           <-- 1st gets called 
+        </pre><hr>
+        <pre>// IIFE Immediately Invoked Function Expression 
+            (function auto_called_function(){
+                console.log("THis is called");
+            })();
+            </pre>
+    </p>
+    <hr>
+    <p>Function Expression</p>
+    <pre>// Arrow Functions
+        // are same the old normal functions just they dont need return a value 
+        
+        
+        const my_name =  (name) =>{
+            console.log("my name is ", name);
+        }
+        
+        my_name("Prajwal");
+        
+        const area =(height,width) =>{
+            return height * width;
+        }
+        console.log(area(200,200));
+        
+        const area1=(height1,width1) => height1*width1;
+        
+        console.log(area1(200,30));</pre>
+   <script src="function.js"></script>
+</body>
+</html>

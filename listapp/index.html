@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reminder Application</title>
+    <style>
+        /* CSS for styling dropdowns and button */
+    </style>
+</head>
+<body>
+    <h2>Set Daily Reminders</h2>
+    <form id="reminderForm">
+        <label for="day">Day of the Week:</label>
+        <select id="day">
+            <option value="Monday">Monday</option>
+            <option value="Tuesday">Tuesday</option>
+            <option value="Wednesday">Wednesday</option>
+            <option value="Thursday">Thursday</option>
+            <option value="Friday">Friday</option>
+            <option value="Saturday">Saturday</option>
+            <option value="Sunday">Sunday</option>
+        </select>
+        <label for="time">Time:</label>
+        <select id="time">
+            <!-- Options for time (e.g., every hour) -->
+        </select>
+        <label for="activity">Activity:</label>
+        <select id="activity">
+            <option value="Wake up">Wake up</option>
+            <option value="Go to gym">Go to gym</option>
+            <option value="Breakfast">Breakfast</option>
+            <option value="Meetings">Meetings</option>
+            <option value="Lunch">Lunch</option>
+            <option value="Quick nap">Quick nap</option>
+            <option value="Go to library">Go to library</option>
+            <option value="Dinner">Dinner</option>
+            <option value="Go to sleep">Go to sleep</option>
+        </select>
+        <button type="submit">Set Reminder</button>
+    </form>
+
+    <script>
+        $(document).ready(function() {
+    $('#reminderForm').submit(function(event) {
+        event.preventDefault();
+        var selectedDay = $('#day').val();
+        var selectedTime = $('#time').val();
+        var selectedActivity = $('#activity').val();
+
+        // Logic to store the reminder (you can use localStorage or cookies)
+
+        // Example of setting a notification sound
+        var reminderTime = new Date();
+        reminderTime.setHours(selectedTime.split(':')[0]);
+        reminderTime.setMinutes(selectedTime.split(':')[1]);
+
+        var currentTime = new Date();
+        var timeDiff = reminderTime - currentTime;
+
+        if (timeDiff > 0) {
+            setTimeout(function() {
+                // Play notification sound
+                var audio = new Audio('notification.mp3'); // Replace with your sound file
+                audio.play();
+
+                // Show a notification message
+                alert('Reminder: ' + selectedActivity);
+            }, timeDiff);
+        } else {
+            alert('Invalid time selected.'); // Handle invalid time selection
+        }
+    });
+});
+    </script>
+</body>
+</html>
