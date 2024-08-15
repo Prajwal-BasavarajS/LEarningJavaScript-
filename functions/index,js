@@ -1,0 +1,92 @@
+const sum = (a,b) => {
+    return a + b    ;
+}
+console.log(sum(5,7));
+// console.log(a);
+
+
+
+const countVowels = (str) =>
+{
+    let count = 0;
+    for(let ch of str){
+        if(ch === 'a' || ch === 'e' || ch === 'i' || ch === 'o'|| ch === 'u')
+            count++;
+        // console.log(str[ch]);
+    }
+    console.log( count );
+}
+
+countVowels("thejashwini T J");
+
+
+let arr1 = [2,35,7,85,43,4];
+
+function calcSq(num){
+    console.log( num * num);
+}
+
+arr1.forEach(calcSq);
+
+
+let ar2r = [2,35,7,85,43,4];
+
+let calcSq2 = (num) => {
+    console.log( num * num);
+}
+
+ar2r.forEach(calcSq2);
+
+
+
+let numb = [23, 40 ,59, 90,53];
+
+numb.map((val)=> {
+    console.log( val*2) ; 
+});
+
+console.log(numb);
+
+let newarr = numb.map((val)=> {
+    return val*2 ; 
+});
+
+console.log("newarr");
+console.log(newarr);
+
+
+let nwArr = [3,5,7,8,74, 44,64,32];
+
+let evearr = nwArr.filter((val)=>{
+    return val % 2 === 0 ;
+}) 
+
+console.log(nwArr);
+
+
+console.log(evearr);
+
+// const prompt = require("prompt-sync")();
+
+let n = 5;
+
+let arr=[];
+for (let i = 0; i < n; i++) {
+    arr [i] = i+1;
+}
+
+console.log(arr);
+
+let summ = arr.reduce((res,curr)=>{
+    return res + curr ;
+});
+
+
+console.log(summ);
+
+
+let prdt = arr.reduce((res,curr)=>{
+    return res * curr ;
+});
+
+console.log(prdt);

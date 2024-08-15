@@ -4,14 +4,17 @@ var boo=true;
 var sym=Symbol("999");
 var str="hello";
 var bigg=BigInt(94849343434232);
-console.log(bigg);
+// console.log(bigg);
 
 //non primitive datatypes
-var mydetails={
+const mydetails={
     name:"Prajwal", 
     usn: '1DB19IS060',          // object
     age: 23,
 };
+
+mydetails.age = "31";
+console.log(mydetails.age);
 
 var array1=[1,3,4,5];
 var array2=[1,3,4,"five"];
