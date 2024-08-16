@@ -1,0 +1,14 @@
+.p-tag{
+    font-size: 22px;
+    color: purple;
+    display: inline;
+    background-color: beige;
+}
+
+
+.new-p{
+    font-size: 26px;
+    /* color: ; */
+    display: inline;
+    background-color: yellowgreen;
+}
